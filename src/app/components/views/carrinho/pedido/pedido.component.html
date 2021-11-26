@@ -1,0 +1,9 @@
+<p>Venda Realizada:</p>
+<label>Cliente: {{ venda.cliente }}</label
+><br />
+<ol>
+  <li *ngFor="let item of venda.itens">
+    {{ item.produto.nome }}, {{ item.produto.preco }},
+    {{ item.produto.descricao }}
+  </li>
+</ol>

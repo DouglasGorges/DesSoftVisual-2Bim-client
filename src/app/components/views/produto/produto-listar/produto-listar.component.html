@@ -1,0 +1,8 @@
+<p>Lista de Produtos</p>
+<ol>
+    <li *ngFor="let produto of produtos">
+        {{ produto.nome }}, {{ produto.preco }}, {{ produto.descricao }}
+        <button (click)="adicionar(produto)">Adicionar no Carrinho</button>
+    </li>
+</ol>
+<button (click)="finalizar()">Visualizar Carrinho</button>

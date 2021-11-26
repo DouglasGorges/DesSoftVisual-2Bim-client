@@ -1,0 +1,18 @@
+<p>Carrinho de Compras</p>
+<ol>
+  <li *ngFor="let item of itens">
+    {{ item.produto.nome }}, {{ item.preco }}, {{ item.quantidade }}
+  </li>
+</ol>
+<div>
+  <label for="cliente">Nome do Cliente:</label>
+  <input type="text" name="cliente" [(ngModel)]="cliente" />
+</div>
+<div>
+  <select>
+    <option *ngFor="let fp of formasPagamento" [value]="fp.id" [(ngModel)]="formaPagamentoSelecionada">
+      {{ fp.descricao }}
+    </option>
+  </select>
+</div>
+<button (click)="finalizar()">Finalizar Compra</button>
